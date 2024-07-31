@@ -13,28 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  
-// logo
-// document.getElementById('btn-lucky').addEventListener('click', function() {
-//   const googleLogo = document.getElementById('logo');
-//   const oddityLogo = document.querySelector('.oddity-logo');
-  
-//   if (googleLogo.classList.contains('hide')) {
-//     googleLogo.classList.remove('hide');
-//     googleLogo.classList.add('show');
-//     oddityLogo.classList.remove('show');
-//     oddityLogo.classList.add('hide');
 
-//   } else {
-//     googleLogo.classList.remove('show');
-//     googleLogo.classList.add('hide');
-//     oddityLogo.style.display = 'block';
-//     setTimeout(() => {
-//       oddityLogo.classList.remove('hide');
-//       oddityLogo.classList.add('show');
-//     }, 10); 
-//   }
-// });
 const logo = document.getElementById('logo');
         const oddityLogo = document.querySelector('.oddity-logo');
         const button = document.getElementById('btn-lucky');
@@ -48,6 +27,5 @@ const logo = document.getElementById('logo');
             } else {
                 logo.classList.remove('hide');
                 oddityLogo.classList.add('hide');
-                oddityLogo.style.transform = 'scale(1)';
             }
         });
