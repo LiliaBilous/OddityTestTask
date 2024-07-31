@@ -81,7 +81,6 @@ svg:focus {
     border-radius: 10%;
     padding: 0.5rem;
     z-index: 50;
-    
 }
 
 .menu.hidden {
@@ -169,14 +168,17 @@ svg:focus {
     gap: 32px;
 }
 
-.main__search-form {}
+.main__search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .search-form__input {
     padding: 0.5rem;
     border: 1px solid rgb(200, 200, 200);
     border-radius: 5rem;
     width: 30rem;
-    
 }
 .search-form__input:hover, 
 .search-form__input:focus {
@@ -223,8 +225,9 @@ svg:focus {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5px;
-
+}
+.search-button {
+    margin: 1rem;
 }
 
 .search-button:hover {
@@ -236,6 +239,9 @@ svg:focus {
 
 .main__subtitle a{
     color: #0960f6;
+}
+.main__subtitle {
+    padding-bottom: 5rem;
 }
 
 /* logo */
@@ -270,16 +276,11 @@ svg:focus {
 }
 .logo,
 .oddity-logo {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
 
 .hide {
-    display: none;
-
-}
-.show {
-    display: block;
-
+    opacity: 0;
 }
 
 .letter {
@@ -302,19 +303,20 @@ svg:focus {
 }
 
 /* footer */
-
 .footer {
     background-color: #f1f0f0;
     color: black;
+    font-size: 16px;
 }
 
 .footer__wrapper {}
 
 .footer__row {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 1rem;
 }
 
 .line {
@@ -340,6 +342,8 @@ svg:focus {
 
 .footer__menu {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     flex-direction: row;
     align-items: center;
     gap: 10px;
@@ -352,3 +356,24 @@ svg:focus {
 }
 
 .footer__right-holder {}
+
+@media(max-width: 50rem) {
+    .footer__row {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+@media(max-width: 34rem) {
+    .search-form__input {
+        width: 20rem;
+    }
+    .search-button {
+        margin: 0.5rem;
+    }
+    .nav-item {
+        padding-right: 0.5rem;
+      }
+      .button-wrap {
+        padding: 10px;
+      }
+}
